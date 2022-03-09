@@ -30,10 +30,18 @@ body:
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
   - type: checkboxes
+    id: jmx
+    attributes:
+      label: Have you added your JMX Testplan or a replica?
+      description: In order to solve your issue we need a JMX testplan or a replica.
+      options:
+        - label: I have added a JMX testplan
+          required: true
+  - type: checkboxes
     id: terms
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: Have you added your Schema or a replica?
+      description: In order to solve your issue we need the Schema you are using or a replica.
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - label: I have added the Schema
           required: true
