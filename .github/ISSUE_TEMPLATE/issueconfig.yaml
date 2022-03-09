@@ -1,47 +1,62 @@
-name: Issue Report
-description: File a issue report
-title: "[Issue]: "
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
 labels: ["bug", "triage"]
+assignees:
+  - Rivarsal
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: checkboxes
-    id: jmx
-    attributes:
-      label: Add Jmx Testplan
-      description: Have you added your JMX Testplan or a replica?
-      options:
-        - label: I have added my JMX Testplan in this issue
-          required: true
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Add Schema
-      description: Have you added your schema or a replica to check it out?
-      options:
-        - label: I have added a schema in this issue
-          required: true
   - type: input
-    id: version
+    id: contact
     attributes:
-      label: KloadGen Version
-      description: What version of KloadGen are you using?
-      placeholder: ex. 3.5.2
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
     validations:
-      required: true
+      required: false
   - type: textarea
     id: what-happened
     attributes:
       label: What happened?
       description: Also tell us, what did you expect to happen?
-      value: ""
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
     validations:
       required: true
+  - type: dropdown
+    id: version
+    attributes:
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
   - type: textarea
     id: logs
     attributes:
       label: Relevant log output
       description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
       render: shell
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
