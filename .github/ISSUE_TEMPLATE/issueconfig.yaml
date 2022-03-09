@@ -12,7 +12,7 @@ body:
       label: What happened?
       description: Also tell us, what did you expect to happen?
       placeholder: Tell us what you see!
-      value: "A bug happened!"
+      value: "Please tell us what happened here, also remember to add your JMX Testplan and the Schema you are using here"
     validations:
       required: true
   - type: input
