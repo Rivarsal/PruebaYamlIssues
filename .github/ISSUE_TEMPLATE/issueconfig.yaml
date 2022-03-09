@@ -1,14 +1,11 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
-assignees:
-  - octocat
+name: Issue Report
+description: File an Issue report
+title: "[Issue]: "
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thanks for taking the time to fill out this Issue report!
   - type: input
     id: contact
     attributes:
